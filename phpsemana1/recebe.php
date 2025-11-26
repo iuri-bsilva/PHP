@@ -5,7 +5,7 @@ class Carro {
     public $velocidade;
     public $valor;
 
-    public function getMarca (){
+    /*public function getMarca (){
         return "Esse carro é da marca: " . $this->marca;
     }
     public function getVelocidade (){
@@ -13,14 +13,26 @@ class Carro {
     }
     public function getValor (){
         return "Esse carro custa: " . $this->valor;
-    }           
+    }   */ 
+     public function __construct($marca, $velocidade, $valor) {
+        $this->marca = $marca;
+        $this->velocidade = $velocidade;
+        $this->valor = $valor;
+    }
+
+    
+        
 }
-    $carro = new Carro();
-    $carro->marca = "BMW <br>";
-    $carro->velocidade = "240 <br>";
-    $carro->valor = 200000;
-    echo $carro->getMarca();
-    echo $carro->getVelocidade();
-    echo $carro->getValor();
+   $carro1 = new Carro("Ferrari", 320, 2500000);
+$carro2 = new Carro("Gol", 160, 45000);
+$carro3 = new Carro("BMW", 280, 550000);
+
+$carros = [$carro1, $carro2, $carro3];
+
+    foreach ($carros as $carro) {
+    echo "Marca: " . $carro->marca . "<br>";
+    echo "Velocidade: " . $carro->velocidade . " km/h<br>";
+    echo "Valor: R$ " . $carro->valor . "<br><br>";
+}
 
 ?>
