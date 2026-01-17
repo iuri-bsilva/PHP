@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Tradutor DevClub</title>
 </head>
-<body>
-    <textarea></textarea>
-    <select>
-        <option>Inglês</option>
-        <option>Espanhol</option>
-        <option>Japonês</option>
-    </select>
 
-    <button>Traduzir</button>
+<body>
+    
+    <div class="caixa-maior">
+    
+        <textarea class="input-texto"></textarea>
+        
+        <div class="controle">
+            <select class="idioma">
+            <option>Inglês</option>
+            <option>Espanhol</option>
+            <option>Japonês</option>
+            </select>
+        </div>
+    
+    <button> 
+        <img src="img/traduzir.svg">
+    </button>
+    <button>
+        <img src="img/microfone.svg">
+    </button>
+
+        <div class="resultado"></div>
+            <h3 class="titulo-traducao">Tradução</h3>
+            <p class="traducao">A Tradução aparecerá aqui...</p>
+        </div>
+
+</div>
+
 </body>
+
 </html>
